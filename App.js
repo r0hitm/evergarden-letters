@@ -1,23 +1,27 @@
 const express = require("express");
-const pug = require("pug");
+// const pug = require("pug"); // does NOT required, loaded by express by default internally
 const logger = require("morgan");
-const favicon = require("serve-favicon");
-const path = require("path");
+// const favicon = require("serve-favicon");
+// const path = require("path");
 
 const app = express();
 const PORT = 3000;
 
-// Middlewares
+// *** Middlewares ***
 app.use(logger("dev"));
-// error handler middleware is used only in development mode
-if (process.env.NODE_ENV === "development") {
-    const errorhandler = require("errorhandler");
-    app.use(errorhandler());
-}
+app.use(express.json()); // these two populate the req.body w/ the form
+app.use(express.urlencoded({ extended: false }));
 // app.use(favicon(path.join(__dirname, 'public', 'favicon.ico'))) // todo
 
+// *** Template engine setup ***
+app.set("views", "./views");    // this is default but I want to be explicit here for learning's sake
+app.set("view engine", "pug");
+
 app.get("/", (req, res) => {
-    res.send("Hello World!");
+    res.render("index", {
+        title: "Evergarden Letters",
+        message: "Violet Evergarden Letters Board",
+    });
 });
 
 app.listen(PORT, () => {
