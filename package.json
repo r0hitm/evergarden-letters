@@ -1,16 +1,31 @@
 {
   "name": "evergarden-letters",
   "version": "0.0.0",
-  "private": true,
+  "description": "Message Board inspired from TOP curriculum and themed around Violet Evergarden anime",
+  "main": "App.js",
   "scripts": {
-    "start": "node ./bin/www"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon App.js",
+    "dev": "NODE_ENV=development npm start"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r0hitm/evergarden-letters.git"
+  },
+  "author": "Rohit Mehta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/r0hitm/evergarden-letters/issues"
+  },
+  "homepage": "https://github.com/r0hitm/evergarden-letters#readme",
   "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "http-errors": "~1.6.3",
-    "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "express": "^4.18.2",
+    "morgan": "^1.10.0",
+    "pug": "^3.0.2",
+    "serve-favicon": "^2.5.0"
+  },
+  "devDependencies": {
+    "errorhandler": "^1.5.1",
+    "nodemon": "^3.0.3"
   }
 }
