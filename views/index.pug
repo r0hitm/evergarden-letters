@@ -1,6 +1,26 @@
-html
+doctype html
+html(lang="en")
   head
-    title= title
+    meta(name='viewport' content='width=device-width, initial-scale=1')
+    meta(name='mobile-web-app-capable' content='yes')
+    meta(charset='utf-8')
+    title Evergarden Letters | Mini-Message Board
+
   body
-    h1= message
-    p This project is WIP. Hold tight! I move fast 😉
+    h1 Evergarden Letters
+    p Post a public letter to be read by anyone! Make their day better by making the letter thoughtful♥
+
+    h2 Write your letter
+
+    form(action="" method="post")
+      div(class="form-field")
+        label(for="msg" title="write your message") 
+        br
+        textarea(name="msg" id="msg" cols="30" rows="10")  
+      div(class="form-field")
+        button(type="submit") Send
+
+    h2 Read Other's Letters
+      div(class="board")
+        ul 
+          li todo
