@@ -8,19 +8,8 @@ html(lang="en")
 
   body
     h1 Evergarden Letters
-    p Post a public letter to be read by anyone! Make their day better by making the letter thoughtful♥
 
-    h2 Write your letter
-
-    form(action="" method="post")
-      div(class="form-field")
-        label(for="msg" title="write your message") 
-        br
-        textarea(name="msg" id="msg" cols="30" rows="10")  
-      div(class="form-field")
-        button(type="submit") Send
-
-    h2 Read Other's Letters
-      div(class="board")
-        ul 
-          li todo
+    div(class="board")
+      ul 
+        each msg in messages
+          li= msg.text + " by " + msg.user
