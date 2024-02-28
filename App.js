@@ -15,6 +15,7 @@ app.use(logger("dev"));
 app.use(express.json()); // these two populate the req.body w/ the form
 app.use(express.urlencoded({ extended: false }));
 app.use(favicon(path.join(__dirname, "public", "favicon.png"))); // todo
+app.use(express.static(path.join(__dirname, "public")));
 
 // *** Template engine setup ***
 app.set("views", "./views"); // this is default but I want to be explicit here for learning's sake
