@@ -1,15 +1,10 @@
-doctype html
-html(lang="en")
-  head
-    meta(name='viewport' content='width=device-width, initial-scale=1')
-    meta(name='mobile-web-app-capable' content='yes')
-    meta(charset='utf-8')
-    title Evergarden Letters | Mini-Message Board
+extends layout.pug 
 
-  body
-    h1 Evergarden Letters
-
-    div(class="board")
-      ul 
-        each msg in messages
-          li= msg.text + " by " + msg.user
+block content 
+  .board
+    ul: each msg in messages 
+          li 
+            .message= msg.text
+            .user= msg.user
+  p: a(href='/new') Post a message 
+  
