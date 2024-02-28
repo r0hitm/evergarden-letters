@@ -6,7 +6,7 @@ const messages = require("../messages");
 router.get("/", function (req, res, next) {
     res.render("index", {
         messages,
-        page_msg: "Read Previously Posted messages",
+        page_msg: "Previously posted letters",
     });
 });
 

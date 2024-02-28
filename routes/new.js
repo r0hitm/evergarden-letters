@@ -5,7 +5,7 @@ const messages = require("../messages");
 // GET show the input form
 router.get("/", function (req, res, next) {
     res.render("form", {
-        page_msg: "Post a Message",
+        page_msg: "Write your letter",
     });
 });
 

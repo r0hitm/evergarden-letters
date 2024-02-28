@@ -2,8 +2,8 @@ extends layout.pug
 
 block content
   form(action="/new" method="POST" class="new-message")
-    textarea(name="msg" placeholder="Enter Your Message" cols="30" rows="10" required)  
-    input(name="author" type="text" minlength="3" required)
+    textarea(name="msg" placeholder="what do want to write?" cols="30" rows="10" required)
+    input(name="author" placeholder="your name, uwu" type="text" minlength="3" required)
     button(type="submit") Send
-  p: a(href='/') Read Messages 
+  p: a(href='/') Read letters
   
