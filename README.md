@@ -1,14 +1,32 @@
 # Evergarden Letters
 
 A mini-message board inspired from [The Odin Project](https://www.theodinproject.com/lessons/nodejs-mini-message-board),
-and themed after the anime [Violet Evergarden](https://anilist.co/anime/21827/).
+and themed after the anime [Violet Evergarden](https://violet-evergarden.jp/).
 
-⚠ **README a work in progress.** Until the project is complete, the README will be updated as the project progresses.
+Project is complete, and I learned what I set out to learn. I'm happy with the result, and I'm moving on to the next project.
+And, it turns out that deploying a NodeJS project is not free. After jumping through many PaaS and IaaS hoops, I decided to deploy
+it on Glitch. You can view the live project [here](https://everlasting-prong-comb.glitch.me). Their free tier is limited, so the project
+might not be available after a while. If that happens, you can always clone the project and run it locally.
 
-**Ad-hoc thoughts for the time being:**
+## Running Locally
 
-- The project is a mini-message board, where users can post messages and view them.
-- This project is a part of the Odin Project's NodeJS curriculum.
-- The project is inspired by the anime Violet Evergarden, and will be themed accordingly.
-- This is my first interactive backend project, so I'm a bit excited for getting my hands dirty.
-- Uses Expressjs, and Pug for templating. Why did I choose Pug? Because I've had some experience with EJS-like jinja2 templating in Flask, and I wanted to try something new, less lines of code. The Pug documentation was straightforward, and syntax resembles Python's indentation, so I don't think I'll have a hard time with it. (*finger's crossed*)
+Clone the project, and run the following commands in the root of the project:
+
+```bash
+npm install
+npm start # or npm run dev
+```
+
+The project will be available at `http://localhost:3000`.
+
+## Things I Learned
+
+In no particular order:
+
+- Setting up a express project from scratch (without using express-generator). Why? Because at the time of development it had severe security vulnerabilities, and breaking updates.
+- Using Pug for templating. It was a breeze to use, and I'm happy with the result.
+- MVC pattern in NodeJS. I've used it before in Flask, and it was nice to see how it's done in NodeJS.
+- Getting familiar with ExpressJS, and its core concepts like middleware, routing, etc.
+
+---
+![Violet Evergarden Banner](./public/banner.jpeg)
